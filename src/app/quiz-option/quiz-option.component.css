@@ -1,27 +1,5 @@
 
 
-.option_row{
-    /* border: 1px solid red; */
-  
-}
-
-#add_question{
-    margin-right: 15%;
-   
-}
-#options{
-    display:flex;
-    flex-direction: row;
-    margin:0 auto;
-  
-}
-
-.option_btn{
-
-    width:200px;
-}
-
-
 @media only screen and (max-width: 980px) {
 
   

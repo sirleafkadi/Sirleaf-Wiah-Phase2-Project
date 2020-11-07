@@ -8,13 +8,45 @@
   </head>
   <body>
 
-
-    <div class="container-fluid">
-        <h2 id="welcome">Welcome to Quiz Application <i class="far fa-smile-wink"></i></h2>
+ 
+<div class="container-fluid">
+  <h2 id="welcome">Welcome to Quiz Application <i class="far fa-smile-wink"></i></h2>
+  <hr> 
+    <div  *ngIf='!show' class="container">
+    
+    <h5 style="text-align:center" > Choose option</h5>
+                <br>
+    <div  class=" option_row row">
+      <div id="options">
+        <div  id="add_question" class=" col-md-6 col-6 option_btn">
+            <button type="button" class="btn btn-info">Add Questions</button>
+       </div>
+        <br> <br>
+        <div class="col-md-6  col-6">
+           <button routerLink="start" type="button" class=" btn btn-primary  " (click)='show_outlet()'>Start Quiz</button>
+        </div>
     </div>
+   </div>
+      
+<hr>
+</div>
 
-      <app-quiz-option></app-quiz-option>
+
+<!-- style="border:1px msolid red" -->
+
+
+
+      <!-- <app-quiz-option></app-quiz-option> -->
     
    
+      <router-outlet *ngIf="show">
+       
+      </router-outlet>
+
+
+
+</div>
+
+
   </body>
 </html>

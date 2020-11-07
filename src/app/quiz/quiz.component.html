@@ -1,1 +1,81 @@
-<p>quiz works!</p>
+
+<div class="container">
+
+<form  #answers='ngForm' (ngSubmit)='get_answers(answers.value)' action="">
+
+    <div class="row" *ngFor='let list of  quiz_quests '>
+        
+        <div class="col-md-6">
+             <p class="quest">{{list.question}}</p>
+        </div>
+      
+        <div class="ans  col-md-6">
+
+         <div>
+            <input id="1" name='{{list.id}}' type="radio" ngModel value='{{list.a}}'> a)
+            <label for="1">{{list.a}}</label>
+        </div>
+
+        <div>
+            <input id="2" name='{{list.id}}' type="radio"  ngModel  value='{{list.b}}'> b)
+            <label for="2">{{list.b}}</label>
+        </div>
+
+        <div>
+         <input id="3" name='{{list.id}}' type="radio" ngModel   value='{{list.c}}'> c)
+         <label for="3">{{list.c}}</label>
+        </div>
+
+        <div>
+          <input id="4"  name='{{list.id}}' type="radio"  ngModel value='d'> d)
+          <label for="4">{{list.d}}</label>
+        </div>
+       
+        </div>
+        
+    </div>
+
+    
+
+    <div class="row">
+        
+        
+
+        <div class=" btn col-md-4 col-12">
+            
+            <button routerLink='home' style="color:white" type="button" class="btn btn-warning">Cancel</button>
+
+
+            <button     type="submit" class="btn btn-success">Submit</button>
+
+            <br> <br>
+
+
+
+
+    </div>
+
+       
+
+
+       
+        
+        
+    </div>
+
+
+
+ 
+
+
+
+    
+</form>
+
+
+
+
+
+
+
+</div>
