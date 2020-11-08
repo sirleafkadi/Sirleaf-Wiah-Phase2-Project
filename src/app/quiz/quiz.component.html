@@ -1,9 +1,9 @@
 
 <div class="container">
 
-<form  #answers='ngForm' (ngSubmit)='get_answers(answers.value)' action="">
+<form  #answers='ngForm' (ngSubmit)='submit(answers.value)' action="">
 
-    <div class="row" *ngFor='let list of  quiz_quests '>
+    <div class="row" *ngFor='let list of  quiz'>
         
         <div class="col-md-6">
              <p class="quest">{{list.question}}</p>
@@ -27,7 +27,7 @@
         </div>
 
         <div>
-          <input id="4"  name='{{list.id}}' type="radio"  ngModel value='d'> d)
+          <input id="4"  name='{{list.id}}' type="radio"  ngModel value='{{list.d}}'> d)
           <label for="4">{{list.d}}</label>
         </div>
        
@@ -39,43 +39,25 @@
 
     <div class="row">
         
-        
-
         <div class=" btn col-md-4 col-12">
             
-            <button routerLink='home' style="color:white" type="button" class="btn btn-warning">Cancel</button>
+            <button style="color:white" type="button" class="btn btn-warning" (click)='cancel()'>Cancel</button>
 
 
-            <button     type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
 
             <br> <br>
-
-
-
+        </div>
 
     </div>
 
-       
-
-
-       
-        
-        
-    </div>
-
-
-
- 
-
-
-
-    
 </form>
 
-
-
-
-
-
-
 </div>
+
+
+
+
+<!-- <ng-content
+
+></ng-content>  -->

@@ -6,16 +6,18 @@ import {applicationRoutes} from './app-routing-module';
 import{HttpClientModule} from '@angular/common/http';
 import{FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
-import { QuizOptionComponent } from './quiz-option/quiz-option.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { ReviewComponent } from './review/review.component';
 import { InstructionComponent } from './instruction/instruction.component';
+import { OptionComponent } from './option/option.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizOptionComponent,
     QuizComponent,
-    InstructionComponent
+    ReviewComponent,
+    InstructionComponent,
+    OptionComponent
   ],
   imports: [
     BrowserModule,

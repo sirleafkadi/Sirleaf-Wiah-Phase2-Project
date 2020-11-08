@@ -1,42 +1,36 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable  } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuizService  {
+export class QuizService {
+  public ready:boolean;
+  public review:boolean;
+  public quiz: questions[];
+  public answers_review: any;
 
-  private quiz_quests: questions[];
-  private ans_list: any[];
-  constructor(private http:HttpClient) { 
 
-  }
+constructor(private http:HttpClient) { this.review=true; this.ready=false; }
+ 
+
 
 
 load_quiz():Observable <questions[]> {
-    return this.http.get<questions[]>  ('http://localhost:3000/quiz');
+  return this.http.get<questions[]>  ('http://localhost:3000/quiz');
 }
 
 
-set_quiz(quiz:questions[]){
-  this.quiz_quests=quiz;
-}
-                              
-
- get_quiz() :questions[]{
-    return this. quiz_quests;
-}
-
-setAns_list(list:any[]){
-this.ans_list=list;
+set_quiz(quiz_input: questions[]){
+  this.quiz= quiz_input;
+  // console.log('Quiz Service after set'+ '\n '+this.answers_review);
 }
 
 
-
-
-
-
+test(){
+  console.log(this.answers_review);
+}
 
 
 
@@ -57,6 +51,7 @@ this.ans_list=list;
 
 
 export class questions{
+  [x: string]: string;
 
   constructor(){}
   // public id:number, public question:String, ans1:String, ans2:String, ans3:String, ans4:String, correct:String

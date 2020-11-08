@@ -7,34 +7,8 @@ body{
     
 }
 
-
-
 #welcome{
-    text-align:center;
-    padding:10px;
-}
-
-
-
-.option_row{
-    /* border: 1px solid red; */
-  
-}
-
-#add_question{
-    margin-right: 15%;
-   
-}
-#options{
-    display:flex;
-    flex-direction: row;
-    margin:0 auto;
-  
-}
-
-.option_btn{
-
-    width:200px;
+    text-align: center;
 }
 
 

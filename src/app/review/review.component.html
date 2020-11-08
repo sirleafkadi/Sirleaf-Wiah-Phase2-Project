@@ -1,0 +1,140 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h3 style="color:red">I worked the whole weekend on this project but my code still wouldn't show the correct answers</h3>
+
+            <h6>Correct: <span>7/10</span></h6>
+            <h6>Scored: <span>70%</span></h6>
+        
+        </div>
+    </div>
+
+    
+    
+        <div class="row" *ngFor='let list of quiz' >
+            
+            <div class="col-md-6" >
+                 <p class="quest">{{list.question}}</p>
+            </div>
+          
+        <div class="ans  col-md-6" >
+
+              
+
+                    
+
+
+
+                   
+
+                <div *ngIf="search(list.id)"  >
+
+                <div >
+                     <p  ><span>{{cur}})</span>{{selected}}</p>
+                </div>
+                </div>
+                <!-- <div *ngIf="!is_correct()">
+                    <div>
+                        <p [class]='fail' ><span>{{cur}})</span>{{selected}}</p>
+                    </div>
+
+                    <div>
+                        <p [class]='pass' ><span></span>{{list.correct}}</p>
+                    </div>
+                </div>
+
+
+
+                </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <!-- <div *ngIf='list.a==incre(list.id) else con'>
+
+                <div *ngIf ='list.a == list.correct fail'>
+                    <p [class]='pass'><span>a)</span> {{list.a}}</p>
+                </div>
+
+                <ng-template #fail>
+                    <div>
+                        <p [class]='fail' ><span>a)</span> {{list.a}}</p>
+                   </div>
+               </ng-template>
+
+             </div>
+
+            <ng-template *ngIf='list.a!=incre(list.id) && list.a == list.correct;' #con>
+                    <div>
+                        <p [class]='green' ><span>a)</span> {{list.a}}</p>
+                   </div>
+            </ng-template> -->
+
+              
+    
+
+
+
+
+
+
+          
+           
+            </div>
+            
+        </div> 
+    
+        
+<!--     
+        <div class="row">
+            
+            <div class=" btn col-md-4 col-12">
+                
+                <button style="color:white" type="button" class="btn btn-warning" (click)='cancel()'>Cancel</button>
+    
+    
+                <button type="submit" class="btn btn-success">Submit</button>
+    
+                <br> <br>
+            </div>
+    
+        </div> -->
+    
+
+    
+    </div>
+    
+    
+    
+    
+    <!-- <ng-content
+    
+    ></ng-content>  -->
