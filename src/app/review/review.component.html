@@ -1,53 +1,58 @@
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-
-            <h3 style="color:red">I worked the whole weekend on this project but my code still wouldn't show the correct answers</h3>
-
-            <h6>Correct: <span>7/10</span></h6>
-            <h6>Scored: <span>70%</span></h6>
-        
-        </div>
-    </div>
+   
 
     
     
-        <div class="row" *ngFor='let list of quiz' >
+        <!-- <div class="row" *ngFor='let list of quiz' >
             
             <div class="col-md-6" >
                  <p class="quest">{{list.question}}</p>
             </div>
           
-        <div class="ans  col-md-6" >
+        <div class="ans  col-md-6" > -->
 
               
 
-                    
+            <div class="row" *ngFor='let list of quiz' >
+            
+                <div class="col-md-6" >
+                     <p class="quest">{{list.question}}</p>
+                </div>
+              
+            <div class="ans  col-md-6" >
 
 
 
+                <div  style="color:red">
+
+                    <div>
+                        <p>Selected answer</p>
+                      <p *ngIf='_selected(list.id)'>{{selected}}</p>
                    
-
-                <div *ngIf="search(list.id)"  >
-
-                <div >
-                     <p  ><span>{{cur}})</span>{{selected}}</p>
-                </div>
-                </div>
-                <!-- <div *ngIf="!is_correct()">
-                    <div>
-                        <p [class]='fail' ><span>{{cur}})</span>{{selected}}</p>
                     </div>
 
+                    
                     <div>
-                        <p [class]='pass' ><span></span>{{list.correct}}</p>
-                    </div>
-                </div>
+                       <p>Correct answer</p>
+                      
+                       <p>{{list.correct}}</p>
+
+
+                   </div>
+             </div>
 
 
 
-                </div> -->
+
+
+
+             
+
+
+
+
+         
 
 
 
@@ -113,6 +118,31 @@
         </div> 
     
         
+
+        <div class="row">
+            
+            <div class=" btn col-md-4 col-12">
+                
+    
+    
+                <button routerLink='option' type="button" class="btn btn-success">Home</button>
+    
+                <br> <br>
+            </div>
+    
+        </div> 
+
+
+
+
+
+
+
+
+
+
+
+
 <!--     
         <div class="row">
             
